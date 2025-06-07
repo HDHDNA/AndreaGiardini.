@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servizi Agricoli e Giardinaggio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    img.glow {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    img.glow:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(34,197,94,0.6);
+    }
+    .card-glow {
+      transition: all 0.3s ease;
+    }
+    .card-glow:hover {
+      box-shadow: 0 0 25px rgba(34,197,94,0.4);
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-green-700 text-white p-6 shadow-md" data-aos="fade-down">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Andrea Giardini</h1>
+      <nav class="space-x-4">
+        <a href="#servizi" class="hover:underline">Servizi</a>
+        <a href="#chi-siamo" class="hover:underline">Chi Siamo</a>
+        <a href="#galleria" class="hover:underline">Galleria</a>
+        <a href="#contatti" class="hover:underline">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-green-100 py-16 text-center" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-4">Servizi di Manodopera Agricola e Giardinaggio</h2>
+    <p class="text-lg mb-6">Siamo un gruppo locale che lavora con passione e impegno per prenderci cura del verde.</p>
+    <a href="#contatti" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800">Contattaci</a>
+  </section>
+
+  <!-- Servizi -->
+  <section id="servizi" class="py-12 bg-white" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-6">I Nostri Servizi</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 border rounded shadow card-glow" data-aos="zoom-in">
+          <h4 class="text-xl font-bold mb-2">Raccolta e Potatura</h4>
+          <p>Lavori stagionali per piante da frutto, olivi, viti e altro. Lavoriamo con cura e precisione.</p>
+        </div>
+        <div class="p-6 border rounded shadow card-glow" data-aos="zoom-in" data-aos-delay="100">
+          <h4 class="text-xl font-bold mb-2">Giardinaggio</h4>
+          <p>Taglio erba, sistemazione siepi, manutenzione stagionale e piccoli interventi paesaggistici.</p>
+        </div>
+        <div class="p-6 border rounded shadow card-glow" data-aos="zoom-in" data-aos-delay="200">
+          <h4 class="text-xl font-bold mb-2">Manodopera</h4>
+          <p>Collaboriamo con aziende agricole locali offrendo supporto flessibile e competente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chi Siamo -->
+  <section id="chi-siamo" class="py-12 bg-gray-100" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-6">Chi Siamo</h3>
+      <p class="max-w-3xl mx-auto">Siamo un gruppo affiatato che ama lavorare all'aperto e contribuire alla bellezza del paesaggio. Offriamo servizi semplici ma fatti con attenzione, puntualità e rispetto per i clienti e per la natura.</p>
+    </div>
+  </section>
+
+  <!-- Galleria -->
+  <section id="galleria" class="py-12" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-6">Galleria Lavori</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <img src="https://via.placeholder.com/400x300" alt="Lavoro agricolo 1" class="rounded shadow glow">
+        <img src="https://via.placeholder.com/400x300" alt="Giardino curato" class="rounded shadow glow">
+        <img src="https://via.placeholder.com/400x300" alt="Potatura alberi" class="rounded shadow glow">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contatti -->
+  <section id="contatti" class="py-16 bg-gradient-to-b from-green-100 to-green-50" data-aos="fade-up">
+    <div class="container mx-auto max-w-2xl">
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-3xl font-semibold mb-6 text-center">Contattaci</h3>
+        <form class="space-y-4">
+          <input type="text" placeholder="Nome" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-400">
+          <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-400">
+          <textarea placeholder="Messaggio" class="w-full p-3 border border-gray-300 rounded h-32 focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
+          <div class="text-center">
+            <button type="submit" class="bg-green-700 text-white py-3 px-6 rounded hover:bg-green-800 transition">Invia Messaggio</button>
+          </div>
+        </form>
+        <div class="text-center mt-8 text-gray-600">
+          <p>📞 +39 345 678 9012</p>
+          <p>📧 info@andreagiardini.it</p>
+          <p>📍 Emilia-Romagna e dintorni</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white p-6" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Andrea Giardini - Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>
