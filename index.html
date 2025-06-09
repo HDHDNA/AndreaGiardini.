@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servizi Agricoli e Giardinaggio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Andrea Giardini - Servizi Agricoli e Giardinaggio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS animazioni -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  
   <style>
+    /* Glow effetto immagini e card servizi */
     img.glow {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
     }
     img.glow:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 20px rgba(34,197,94,0.6);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #22c55e88;
     }
     .card-glow {
-      transition: all 0.3s ease;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
     }
     .card-glow:hover {
-      box-shadow: 0 0 25px rgba(34,197,94,0.4);
-      transform: translateY(-5px);
+      box-shadow: 0 0 25px #22c55e88;
+      transform: translateY(-6px);
     }
   </style>
 </head>
 <body class="bg-white text-gray-800">
+
   <!-- Header -->
-  <header class="bg-green-700 text-white p-6 shadow-md" data-aos="fade-down">
+  <header class="bg-green-700 text-white p-6 fixed w-full top-0 left-0 z-50 shadow-md" data-aos="fade-down">
     <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Andrea Giardini</h1>
-      <nav class="space-x-4">
+      <h1 class="text-2xl font-bold cursor-default">Andrea Giardini</h1>
+      <nav class="space-x-6 text-lg">
         <a href="#servizi" class="hover:underline">Servizi</a>
         <a href="#chi-siamo" class="hover:underline">Chi Siamo</a>
         <a href="#galleria" class="hover:underline">Galleria</a>
@@ -37,86 +46,178 @@
     </div>
   </header>
 
+  <div class="h-20"></div> <!-- Spazio per header fisso -->
+
   <!-- Hero -->
-  <section class="bg-green-100 py-16 text-center" data-aos="fade-up">
-    <h2 class="text-4xl font-bold mb-4">Servizi di Manodopera Agricola e Giardinaggio</h2>
-    <p class="text-lg mb-6">Siamo un gruppo locale che lavora con passione e impegno per prenderci cura del verde.</p>
-    <a href="#contatti" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800">Contattaci</a>
+  <section class="bg-green-100 py-20 text-center" data-aos="fade-up">
+    <h2 class="text-5xl font-extrabold mb-4">Servizi di Manodopera Agricola e Giardinaggio</h2>
+    <p class="text-xl max-w-3xl mx-auto mb-8">Siamo un  gruppo che lavora in campagna e nei giardini. Offriamo servizi di manodopera agricola, raccolta, potatura e manodopera agricola .</p>
+    <a href="#contatti" class="bg-green-700 text-white py-3 px-8 rounded hover:bg-green-800 transition">Contattaci Ora</a>
   </section>
 
   <!-- Servizi -->
-  <section id="servizi" class="py-12 bg-white" data-aos="fade-up">
-    <div class="container mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-6">I Nostri Servizi</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-6 border rounded shadow card-glow" data-aos="zoom-in">
-          <h4 class="text-xl font-bold mb-2">Raccolta e Potatura</h4>
-          <p>Lavori stagionali per piante da frutto, olivi, viti e altro. Lavoriamo con cura e precisione.</p>
-        </div>
-        <div class="p-6 border rounded shadow card-glow" data-aos="zoom-in" data-aos-delay="100">
-          <h4 class="text-xl font-bold mb-2">Giardinaggio</h4>
-          <p>Taglio erba, sistemazione siepi, manutenzione stagionale e piccoli interventi paesaggistici.</p>
-        </div>
-        <div class="p-6 border rounded shadow card-glow" data-aos="zoom-in" data-aos-delay="200">
-          <h4 class="text-xl font-bold mb-2">Manodopera</h4>
-          <p>Collaboriamo con aziende agricole locali offrendo supporto flessibile e competente.</p>
-        </div>
+  <section id="servizi" class="py-16 container mx-auto max-w-5xl" data-aos="fade-up">
+    <h3 class="text-4xl font-bold text-center mb-12">I Nostri Servizi</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="p-8 border rounded-lg shadow-lg card-glow" data-aos="zoom-in">
+        <h4 class="text-2xl font-semibold mb-4">Raccolta e Potatura</h4>
+        <p>Ci occupiamo di raccolta dell’uva e potatura delle viti.</p>
+      </div>
+      <div class="p-8 border rounded-lg shadow-lg card-glow" data-aos="zoom-in" data-aos-delay="150">
+        <h4 class="text-2xl font-semibold mb-4">Giardinaggio</h4>
+        <p>Taglio erba, sistemazione siepi, manutenzione di giardini.</p>
+      </div>
+      <div class="p-8 border rounded-lg shadow-lg card-glow" data-aos="zoom-in" data-aos-delay="300">
+        <h4 class="text-2xl font-semibold mb-4">Manodopera agricola</h4>
+        <p>Offriamo aiuto nella legatura delle viti.</p>
       </div>
     </div>
   </section>
 
   <!-- Chi Siamo -->
-  <section id="chi-siamo" class="py-12 bg-gray-100" data-aos="fade-up">
-    <div class="container mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-6">Chi Siamo</h3>
-      <p class="max-w-3xl mx-auto">Siamo un gruppo affiatato che ama lavorare all'aperto e contribuire alla bellezza del paesaggio. Offriamo servizi semplici ma fatti con attenzione, puntualità e rispetto per i clienti e per la natura.</p>
+  <section id="chi-siamo" class="bg-gray-100 py-16" data-aos="fade-up">
+    <div class="container mx-auto max-w-4xl text-center px-6">
+      <h3 class="text-4xl font-bold mb-8">Chi Siamo</h3>
+      <p class="text-lg leading-relaxed">
+        Siamo un gruppo affiatato che ama lavorare all’aria aperta e contribuire a mantenere i paesaggi verdi e sani. La nostra forza è nella semplicità: offriamo servizi fatti con attenzione, puntualità e rispetto, mettendo sempre al primo posto la soddisfazione del cliente e la salute delle piante.
+      </p>
     </div>
   </section>
 
   <!-- Galleria -->
-  <section id="galleria" class="py-12" data-aos="fade-up">
-    <div class="container mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-6">Galleria Lavori</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <img src="https://via.placeholder.com/400x300" alt="Lavoro agricolo 1" class="rounded shadow glow">
-        <img src="https://via.placeholder.com/400x300" alt="Giardino curato" class="rounded shadow glow">
-        <img src="https://via.placeholder.com/400x300" alt="Potatura alberi" class="rounded shadow glow">
-      </div>
+  <section id="galleria" class="py-16 container mx-auto max-w-5xl" data-aos="fade-up">
+    <h3 class="text-4xl font-bold text-center mb-12">Galleria dei Nostri Lavori</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Raccolta frutta" class="rounded-lg shadow-lg glow" />
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&q=80" alt="Giardino curato" class="rounded-lg shadow-lg glow" />
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80" alt="Potatura alberi" class="rounded-lg shadow-lg glow" />
     </div>
   </section>
 
   <!-- Contatti -->
-  <section id="contatti" class="py-16 bg-gradient-to-b from-green-100 to-green-50" data-aos="fade-up">
-    <div class="container mx-auto max-w-2xl">
-      <div class="bg-white p-8 rounded-lg shadow-lg">
-        <h3 class="text-3xl font-semibold mb-6 text-center">Contattaci</h3>
-        <form class="space-y-4">
-          <input type="text" placeholder="Nome" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-400">
-          <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-400">
-          <textarea placeholder="Messaggio" class="w-full p-3 border border-gray-300 rounded h-32 focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
-          <div class="text-center">
-            <button type="submit" class="bg-green-700 text-white py-3 px-6 rounded hover:bg-green-800 transition">Invia Messaggio</button>
+  <section id="contatti" class="py-20 bg-gradient-to-b from-green-100 to-green-50" data-aos="fade-up">
+    <div class="container mx-auto max-w-3xl px-6">
+
+      <h2 class="text-4xl font-bold mb-12 text-center">Contattaci</h2>
+
+      <form id="contactForm" action="https://formspree.io/f/myzjedqz" method="POST" class="bg-white rounded-lg shadow-lg p-8 space-y-6" novalidate>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="nome" class="block mb-2 font-semibold">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Il tuo nome" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500" required />
           </div>
-        </form>
-        <div class="text-center mt-8 text-gray-600">
-          <p>📞 +39 345 678 9012</p>
-          <p>📧 info@andreagiardini.it</p>
-          <p>📍 Pavia e dintorni</p>
+          <div>
+            <label for="cognome" class="block mb-2 font-semibold">Cognome</label>
+            <input type="text" id="cognome" name="cognome" placeholder="Il tuo cognome" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500" required />
+          </div>
         </div>
-      </div>
+
+        <div>
+          <label for="email" class="block mb-2 font-semibold">Email</label>
+          <input type="email" id="email" name="email" placeholder="esempio@domain.com" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500" required />
+        </div>
+
+        <div>
+          <label for="messaggio" class="block mb-2 font-semibold">Messaggio</label>
+          <textarea id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 resize-none" required></textarea>
+        </div>
+
+        <div class="flex space-x-4">
+          <button type="submit" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded transition">Invia Messaggio</button>
+          <button type="reset" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-700 font-semibold py-3 rounded transition">Resetta</button>
+        </div>
+
+        <p id="formMessage" class="mt-4 text-center font-semibold"></p>
+      </form>
+
+      <section id="info" class="bg-green-50 rounded-lg p-8 shadow-lg mt-16 text-center">
+       <h3 class="text-3xl font-bold mb-6">Informazioni</h3>
+<p class="text-lg mb-4">
+  📞 <a href="tel:+391234567890" class="text-green-700 font-semibold hover:underline">+39 344 678 3676</a>
+</p>
+<p class="text-lg mb-4">
+  📧 <a href="andreasheshi82@gmail.com" class="text-green-700 font-semibold hover:underline">andreasheshi82@gmail.com</a>
+</p>
+<p class="text-lg mb-4">
+  📍 Lavoriamo a Pavia e nei dintorni.
+</p>
+<p class="text-lg">
+  🗓️ Disponibili dal lunedì al sabato.
+</p>
+
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-green-700 text-white p-6" data-aos="fade-up">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2025 Andrea Giardini - Tutti i diritti riservati.</p>
-    </div>
+  <footer class="bg-green-700 text-white p-6 text-center mt-16">
+    <p>&copy; 2025 Andrea Giardini - Tutti i diritti riservati.</p>
   </footer>
 
+  <!-- Script animazioni AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000 });
   </script>
+
+  <!-- Script validazione form + invio -->
+  <script>
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    function validaEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      formMessage.textContent = '';
+      formMessage.style.color = '';
+
+      const nome = form.nome.value.trim();
+      const cognome = form.cognome.value.trim();
+      const email = form.email.value.trim();
+      const messaggio = form.messaggio.value.trim();
+
+      if (!nome || !cognome || !email || !messaggio) {
+        formMessage.textContent = 'Per favore, compila tutti i campi.';
+        formMessage.style.color = 'red';
+        return;
+      }
+
+      if (!validaEmail(email)) {
+        formMessage.textContent = 'Inserisci un indirizzo email valido.';
+        formMessage.style.color = 'red';
+        return;
+      }
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+      .then(response => {
+        if (response.ok) {
+          formMessage.style.color = 'green';
+          formMessage.textContent = 'Messaggio inviato con successo! Ti risponderemo presto.';
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if (data.errors) {
+              formMessage.style.color = 'red';
+              formMessage.textContent = data.errors.map(error => error.message).join(", ");
+            } else {
+              formMessage.style.color = 'red';
+              formMessage.textContent = 'Errore durante l\'invio. Riprova più tardi.';
+            }
+          });
+        }
+      })
+      .catch(() => {
+        formMessage.style.color = 'red';
+        formMessage.textContent = 'Errore di connessione. Riprova più tardi.';
+      });
+    });
+  </script>
+
 </body>
 </html>
